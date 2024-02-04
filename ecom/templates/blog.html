@@ -1,0 +1,457 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Blog{% endblock title %}
+{% block body %}
+
+
+
+
+<body>
+
+    <section class="nav">
+        {% comment %} <a href="" class="logo"><img src="images/logo.png" alt=""></a> {% endcomment %}
+        {% comment %} <ul class="navlist">
+             <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Product</a></li> 
+            <li><a href="">Gallary</a></li>
+            <li><a href="">Contact</a></li>
+        </ul> {% endcomment %}
+         <div class="nav-icons"> 
+            {% comment %} <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a> {% endcomment %}
+        </div> 
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </section>
+
+    <section class="Home">
+
+    <!-- swiper starts -->
+    <div class="swiper mySwiper home-swiper row container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide row flex">
+            <div class="home-content">
+                <div>
+                    <h1>The Ultimate Cosmatic Store</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque error laudantium odio impedit sit soluta obcaecati commodi atque vero quo ducimus enim sint possimus assumenda, deleniti maxime laboriosam illo.</p>
+                </div>
+                <a href="#" class="main-btn active">Shop Now</a>
+            </div>
+            <div class="home-img row">
+                <img src="{% static 'images/home1.png'%}" alt="">
+            </div>
+          </div>
+
+          <div class="swiper-slide row flex">
+            <div class="home-content">
+                <div>
+                    <h1>The Ultimate Cosmatic Store</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque error laudantium odio impedit sit soluta obcaecati commodi atque vero quo ducimus enim sint possimus assumenda, deleniti maxime laboriosam illo.</p>
+                    
+                </div>
+                <a href="#" class="main-btn active">Shop Now</a>
+            </div>
+            <div class="home-img row">
+                <img src="{% static 'images/home2.png'%}" alt="">
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+
+
+<!-- PRODUCTS SECTION -->
+
+    <secttion class="products container">
+        <div class="row flex">
+            <div class="p-content">
+                <h3>For Whoman</h3>
+                <p>400+ Products</p>
+            </div>
+            <div class="image"><a href=""><img src="{% static 'images/p women.jpg'%}" alt=""></a></div>
+        </div>
+        <div class="row flex">
+            <div class="p-content">
+                <h3>For Mens</h3>
+                <p>600+ Products</p>
+            </div>
+            <div class="image"><a href=""><img src="{% static 'images/p men.jpg'%}" alt=""></a></div>
+        </div>
+        <div class="row flex">
+            <div class="p-content">
+                <h3>For Children</h3>
+                <p>70+ Products</p>
+            </div>
+            <div class="image"><a href=""><img src="{% static 'images/p children.jpg'%}" alt=""></a></div>
+        </div>
+
+          <!-- Products Swiper -->
+  <div class="swiper mySwiper p-swiper">
+    <div class="slider-content row">
+        <div class="heading">
+            <h2>Latest Deals</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eaque expedita beatae tempora iusto nostrum soluta enim debitis magnam? Voluptate, voluptatum odio est vero molestias debitis aliquam cumque quibusdam. Voluptatem!</p>
+        </div>
+        <div class="arrow row">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>    
+    </div>
+     
+    <div class="swiper-wrapper">
+      <div class="swiper-slide column">
+        <div class="s-img row">
+            <img src="{% static 'images/s1.png' %}" alt="">
+            <div class="tag">Hot</div>
+        </div>
+        <div>
+            <h4>Nivea lotion</h4>
+            <div class="price row">
+                <h6>$30</h6>
+                <h6><s>$40</s></h6>
+            </div>
+        </div>
+
+        <div class="btns row">
+            <a href="" class="main-btn">Add to cart</a>
+            <div class="fav row">
+                <a href=""><i class="fa-solid fa-heart"></i></a>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="swiper-slide column">
+        <div class="s-img row">
+            <img src="{% static 'images/s2.png' %}" alt="">
+            <div class="tag">Hot</div>
+        </div>
+        <div>
+            <h4>Nivea lotion</h4>
+            <div class="price row">
+                <h6>$30</h6>
+                <h6><s>$40</s></h6>
+            </div>
+        </div>
+
+        <div class="btns row">
+            <a href="" class="main-btn">Add to cart</a>
+            <div class="fav row">
+                <a href=""><i class="fa-solid fa-heart"></i></a>
+            </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide column">
+        <div class="s-img row">
+            <img src="{% static 'images/s3.png' %}" alt="">
+            <div class="tag">Hot</div>
+        </div>
+        <div>
+            <h4>Nivea lotion</h4>
+            <div class="price row">
+                <h6>$30</h6>
+                <h6><s>$40</s></h6>
+            </div>
+        </div>
+
+        <div class="btns row">
+            <a href="" class="main-btn">Add to cart</a>
+            <div class="fav row">
+                <a href=""><i class="fa-solid fa-heart"></i></a>
+            </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide column">
+        <div class="s-img row">
+            <img src="{% static 'images/s4.png' %}" alt="">
+            <div class="tag">Hot</div>
+        </div>
+        <div>
+            <h4>Nivea lotion</h4>
+            <div class="price row">
+                <h6>$30</h6>
+                <h6><s>$40</s></h6>
+            </div>
+        </div>
+
+        <div class="btns row">
+            <a href="" class="main-btn">Add to cart</a>
+            <div class="fav row">
+                <a href=""><i class="fa-solid fa-heart"></i></a>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="swiper-slide column">
+        <div class="s-img row">
+            <img src="{% static 'images/s5.png' %}" alt="">
+            <div class="tag">Hot</div>
+        </div>
+        <div>
+            <h4>Nivea lotion</h4>
+            <div class="price row">
+                <h6>$30</h6>
+                <h6><s>$40</s></h6>
+            </div>
+        </div>
+
+        <div class="btns row">
+            <a href="" class="main-btn">Add to cart</a>
+            <div class="fav row">
+                <a href=""><i class="fa-solid fa-heart"></i></a>
+            </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+    </secttion>
+    
+
+<!-- About Section-  -->
+    <section class="about">
+        <div class="about-content row flex container">
+            <div class="a-image row"><img src="{% static 'images/about1.jpg' %}"></a></div>
+            <div class="content">
+                <h2>About our Products</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, ex soluta! Culpa, excepturi ad! Eaque officiis nesciunt distinctio, dolores dolor cumque debitis unde esse eligendi totam sequi minus quis! Fuga.</p>
+                <a href="">Read More</a>    
+            </div>
+        </div>
+    </section>
+
+    <!-- -Offer section- -->
+
+    <section class="offer swiper mySwiper o-swiper container">
+        <div class="slider-content row">
+            <div class="heading">
+                <h2>Discounted Products</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aliquid velit .</p>
+            </div>
+            <div class="arrow row">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div> 
+        </div>
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide column">
+                <div class="s-img row">
+                    <img src="{% static 'images/s1.png' %}" alt="">
+                    <div class="tag">Hot</div>
+                </div>
+                <div>
+                    <h4>Nivea lotion</h4>
+                    <div class="price row">
+                        <h6>$30</h6>
+                        <h6><s>$40</s></h6>
+                    </div>
+                </div>
+        
+                <div class="btns row">
+                    <a href="" class="main-btn">Add to cart</a>
+                    <div class="fav row">
+                        <a href=""><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+              </div>
+        
+        
+              <div class="swiper-slide column">
+                <div class="s-img row">
+                    <img src="{% static 'images/s2.png' %}" alt="">
+                    <div class="tag">Hot</div>
+                </div>
+                <div>
+                    <h4>Nivea lotion</h4>
+                    <div class="price row">
+                        <h6>$30</h6>
+                        <h6><s>$40</s></h6>
+                    </div>
+                </div>
+        
+                <div class="btns row">
+                    <a href="" class="main-btn">Add to cart</a>
+                    <div class="fav row">
+                        <a href=""><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+              </div>
+        
+              <div class="swiper-slide column">
+                <div class="s-img row">
+                    <img src="{% static 'images/s3.png' %}" alt="">
+                    <div class="tag">Hot</div>
+                </div>
+                <div>
+                    <h4>Nivea lotion</h4>
+                    <div class="price row">
+                        <h6>$30</h6>
+                        <h6><s>$40</s></h6>
+                    </div>
+                </div>
+        
+                <div class="btns row">
+                    <a href="" class="main-btn">Add to cart</a>
+                    <div class="fav row">
+                        <a href=""><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+              </div>
+        
+              <div class="swiper-slide column">
+                <div class="s-img row">
+                    <img src="{% static 'images/s4.png' %}" alt="">
+                    <div class="tag">Hot</div>
+                </div>
+                <div>
+                    <h4>Nivea lotion</h4>
+                    <div class="price row">
+                        <h6>$30</h6>
+                        <h6><s>$40</s></h6>
+                    </div>
+                </div>
+        
+                <div class="btns row">
+                    <a href="" class="main-btn">Add to cart</a>
+                    <div class="fav row">
+                        <a href=""><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div>
+              </div>
+        
+        
+              <div class="swiper-slide column">
+                <div class="s-img row">
+                    <img src="{% static 'images/s5.png' %}" alt="">
+                    <div class="tag">Hot</div>
+                </div>
+                <div>
+                    <h4>Nivea lotion</h4>
+                    <div class="price row">
+                        <h6>$30</h6>
+                        <h6><s>$40</s></h6>
+                    </div>
+                </div>
+        
+                <div class="btns row">
+                    <a href="" class="main-btn">Add to cart</a>
+                    <div class="fav row">
+                        <a href=""><i class="fa-solid fa-heart"></i></a>
+                    </div>
+              </div>
+              </div> 
+        </div>
+    </section>
+    <!-- -testimonial  section- -->
+
+    <section class="testimonial">
+        <div class="row flex container">
+            <div class=" swiper mySwiper testimonial-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image row"> <img src="{% static 'images/t1.jpg' %}" alt=""></div>
+                        <fieldset>
+                            <legend><i class="fa-solid fa-quote-left"></i></legend>
+                            <div class="quote-column">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, enim alias? Aperiam culpa dignissimos saepe ratione incidunt eaque vitae alias earum repellendus fugiat iure obcaecati tempore, ut corrupti, quae eligendi.</p>
+                                <h4>Edward collin</h4>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image row"> <img src="{% static 'images/t1.jpg'%}" alt=""></div>
+                        <fieldset>
+                            <legend><i class="fa-solid fa-quote-left"></i></legend>
+                            <div class="quote-column">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, enim alias? Aperiam culpa dignissimos saepe ratione incidunt eaque vitae alias earum repellendus fugiat iure obcaecati tempore, ut corrupti, quae eligendi.</p>
+                                <h4>Edward collin</h4>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="slider-content row">
+                     <div class="arrow row">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="heading">
+                <h2>Buyer Reviews</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aspernatur dolore eos illum.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- -Subscription section- -->
+
+    <section class="subscribe">
+        <div class="subscriber row container">
+            <div class="subscribe-content">
+                <h2>Subscribe for latest Deals</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta obcaecati laboriosam unde eum, quas quasi, aliquam, consequatur ullam repellendus veritatis ducimus sequi. Ratione.</p>
+                <form action="" class="row">
+                    <input type="email" tename="" id="" placeholder="Enter Your Email">
+                    <button type="button" class="main-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- -Logos section- -->
+
+
+    <!-- -Gallary section section- -->
+    <section class="gallery">
+        <div class="gallery-content row flex">
+         <div class="content">
+            <h2>Follow Us on social media</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iste molestiae aspernatur modi aliquam omnis sint! Totam ea itaque eaque?</p>
+         </div>
+         <div class="gallery-images column">
+            <div class="row"> <img src="{% static 'images/g (1).jpg' %}" alt=""></div>
+            <div class="row"> <img src="{% static 'images/g (1).png' %}" alt=""></div>
+            <div class="row"> <img src="{% static 'images/g (2).jpg' %}" alt=""></div>
+            <div class="row"> <img src="{% static 'images/g (2).png' %}" alt=""></div>
+            <div class="row"> <img src="{% static 'images/g (3).jpg' %}" alt=""></div>
+            <div class="row"> <img src="{% static 'images/g (3).png' %}" alt=""></div>
+            <div class="row"> <img src="{% static 'images/g (4).jpg' %}" alt=""></div>
+            <div class="row"> <img src="{% static 'images/g (4).png' %}" alt=""></div>
+            
+
+         </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+    
+
+    
+
+
+
+
+
+
+{% endblock body %}
