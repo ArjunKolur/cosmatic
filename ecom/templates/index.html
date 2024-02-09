@@ -44,25 +44,26 @@ Home
       <div class="row">
 
         {% for i in product %}
-        <div class="col-md-3 mt-3">
-          <img src="/media/{{i.image}}" class="card-img-top" alt="not found" height="200px" width="150px" />
-          <div class="card-body">
-            <h5 class="card-title mt-2" id="namepr{{i.id}}">{{i.product_name}}</h5>
-            <p class="card-text">{{i.desc|slice:"0:53"}}...</p>
-            <h6 class="card-title mb-3">
-              Price:<span id="pricepr{{i.id}}">{{i.price}}</span>
-            </h6>
-            <span id="divpr{{i.id}}" class="divpr">
-              <button id="pr{{i.id}}" class="btn btn-danger cart btn-sm mt-0">
-                AddToCart <i class="fa-solid fa-cart-shopping"></i>
-              </button>
-            </span>
+        <!-- Add the 'data-toggle' and 'data-placement' attributes to enable tooltips -->
+<div class="col-md-3 mt-3">
+  <img src="/media/{{i.image}}" class="card-img-top" alt="not found" height="200px" width="150px" data-toggle="tooltip" data-placement="bottom" title="{{i.desc}}">
+  <div class="card-body">
+      <h5 class="card-title mt-2" id="namepr{{i.id}}">{{i.product_name}}</h5>
+      <p class="card-text">{{i.desc|slice:"0:53"}}...</p>
+      <h6 class="card-title mb-3">
+          Price:<span id="pricepr{{i.id}}">{{i.price}}</span>
+      </h6>
+      <span id="divpr{{i.id}}" class="divpr">
+          <button id="pr{{i.id}}" class="btn btn-danger cart btn-sm mt-0">
+              AddToCart <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+      </span>
+      <a href="/media/{{i.image}}">
+          <button class="btn btn-dark btn-sm cart"><i class="fa-solid fa-eye"></i></button>
+      </a>
+  </div>
+</div>
 
-            <a href="/media/{{i.image}}">
-              <button class="btn btn-dark btn-sm cart"><i class="fa-solid fa-eye"></i></button></a
-            >
-          </div>
-        </div>
 
         {% endfor %}
       </div>
@@ -88,6 +89,14 @@ Home
       updateCart(cart);
 
   }
+
+
+// hover the details of products
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+
+
   // add or increment code
 
   // $('.cart').click(function() {

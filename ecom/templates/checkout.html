@@ -4,7 +4,7 @@ Check Out
 {% endblock title %} 
 {% block content %}
 
-<h1>Pleas well come back to our store</h1>
+<h1>Pleas Give Detais of delivery</h1>
 
 {% endblock content %} 
 {% block body %} 
@@ -48,19 +48,15 @@ Check Out
                    <nav aria-label="breadcrumb">
          <ol class="breadcrumb mt-3">
            <li class="breadcrumb-item active" aria-current="page">Your Cart Total Is <b>Rs. <span id="totalprice"></span> <span id="amount"></span></b>. Enter your details below & place your order. Thanks for using Shopping Cart</li>
-           <li</li>
+           </li>
          </ol>
-       </nav>
-       
-       
-       
+       </nav>       
                    
                </div>
            </div>
            <div class="col my-4">
                <h2>Step 2 - Enter Address & Other Details:</h2>
-               <form method="post" action="checkout">
-                {% csrf_token %}
+               <form method="post" action="/checkout/">{% csrf_token %}
                    <input type="hidden" name="itemsJson" id="itemsJson">
                 
                    <input type="hidden" id="amt" name="amt">
@@ -123,7 +119,10 @@ Check Out
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 
+
+   
 <script>
+    // cart section script
 if (localStorage.getItem('cart') == null) {
    var cart = {};
 } else {

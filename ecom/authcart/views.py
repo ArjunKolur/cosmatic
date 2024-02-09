@@ -60,24 +60,25 @@ class ActivateAccountView(View):
             return redirect('/auth/login')
         return render(request,'activatefail.html')
 
-def handlelogin(request):
-    if request.method=="POST":
 
-        username=request.POST['email']
-        userpassword=request.POST['pass1']
-        myuser=authenticate(username=username,password=userpassword)
+
+def handlelogin(request):
+    if request.method == "POST":
+        username = request.POST.get('email')
+        userpassword = request.POST.get('pass1')
+        print(f"Username: {username}, Password: {userpassword}")
+
+        myuser = authenticate(request, username=username, password=userpassword)
 
         if myuser is not None:
-            login(request,myuser)
-            messages.success(request,"Login Success")
-            return redirect('/')
-
+            login(request, myuser)
+            messages.success(request, "Login Success")
+            return redirect('index')
         else:
-            messages.error(request,"Invalid Credentials")
+            messages.error(request, "Invalid Credentials")
             return redirect('/auth/login')
 
-    return render(request,'login.html')  
-
+    return render(request, 'login.html')
 
 
 
@@ -86,7 +87,7 @@ def handlelogin(request):
 def handlelogout(request):
     logout(request)
     messages.info(request,"Logout Success")
-    return redirect('/auth/login')
+    return redirect('login')
 
 
 class RequestResetEmailView(View):
